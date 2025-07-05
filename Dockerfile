@@ -2,6 +2,8 @@ FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
+ENV JAVA_HOME=/opt/java/openjdk
+
 COPY . .
 
 RUN chmod +x ./gradlew
