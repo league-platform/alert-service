@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DATASOURCES_DEFAULT_URL=jdbc:postgresql://db:5432/alerts_db
+      - DATASOURCES_DEFAULT_USERNAME=postgres
+      - DATASOURCES_DEFAULT_PASSWORD=postgres
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: alerts_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
