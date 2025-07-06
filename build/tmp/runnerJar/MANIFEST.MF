@@ -1,0 +1,54 @@
+Manifest-Version: 1.0
+Class-Path: resources/ classes/ libs/micronaut-data-hibernate-jpa-4.0.1.
+ jar libs/micronaut-openapi-5.0.1.jar libs/micronaut-serde-jackson-2.0.1
+ .jar libs/micronaut-jdbc-hikari-5.0.1.jar libs/micronaut-data-jpa-4.0.1
+ .jar libs/micronaut-data-runtime-4.0.1.jar libs/micronaut-data-model-4.
+ 0.1.jar libs/micronaut-data-tx-hibernate-4.0.1.jar libs/micronaut-hiber
+ nate-jpa-5.0.1.jar libs/micronaut-openapi-annotations-5.0.1.jar libs/mi
+ cronaut-serde-support-2.0.1.jar libs/micronaut-serde-api-2.0.1.jar libs
+ /micronaut-data-tx-jdbc-4.0.1.jar libs/micronaut-data-connection-jdbc-4
+ .0.1.jar libs/micronaut-jdbc-5.0.1.jar libs/micronaut-data-tx-4.0.1.jar
+  libs/micronaut-data-connection-hibernate-4.0.1.jar libs/micronaut-vali
+ dation-4.0.1.jar libs/micronaut-data-connection-4.0.1.jar libs/micronau
+ t-reactor-3.0.1.jar libs/micronaut-http-server-netty-4.0.0.jar libs/mic
+ ronaut-json-core-4.0.0.jar libs/micronaut-http-netty-4.0.0.jar libs/mic
+ ronaut-http-server-4.0.0.jar libs/micronaut-router-4.0.0.jar libs/micro
+ naut-http-4.0.0.jar libs/micronaut-context-propagation-4.0.0.jar libs/m
+ icronaut-context-4.0.0.jar libs/micronaut-aop-4.0.0.jar libs/micronaut-
+ buffer-netty-4.0.0.jar libs/micronaut-inject-4.0.0.jar libs/postgresql-
+ 42.6.0.jar libs/logback-classic-1.4.8.jar libs/jackson-dataformat-yaml-
+ 2.15.2.jar libs/jackson-datatype-jsr310-2.15.2.jar libs/jackson-databin
+ d-2.15.2.jar libs/swagger-models-2.2.14.jar libs/micronaut-jackson-core
+ -4.0.0.jar libs/jackson-annotations-2.15.2.jar libs/jackson-core-2.15.2
+ .jar libs/jakarta.annotation-api-2.1.1.jar libs/netty-codec-http2-4.1.9
+ 4.Final.jar libs/netty-codec-http-4.1.94.Final.jar libs/netty-handler-4
+ .1.94.Final.jar libs/netty-codec-4.1.94.Final.jar libs/netty-transport-
+ native-unix-common-4.1.94.Final.jar libs/netty-transport-4.1.94.Final.j
+ ar libs/netty-buffer-4.1.94.Final.jar libs/reactor-core-3.5.7.jar libs/
+ micronaut-core-reactive-4.0.0.jar libs/reactive-streams-1.0.4.jar libs/
+ snakeyaml-2.0.jar libs/micronaut-core-4.0.0.jar libs/logback-core-1.4.8
+ .jar libs/HikariCP-5.0.1.jar libs/slf4j-api-2.0.7.jar libs/flexmark-htm
+ l2md-converter-0.64.8.jar libs/javadoc-parser-0.3.1.jar libs/jsoup-1.16
+ .1.jar libs/swagger-annotations-2.2.14.jar libs/hibernate-core-6.2.6.Fi
+ nal.jar libs/jakarta.persistence-api-3.1.0.jar libs/jakarta.transaction
+ -api-2.0.1.jar libs/jakarta.validation-api-3.0.2.jar libs/checker-qual-
+ 3.31.0.jar libs/jakarta.inject-api-2.0.1.jar libs/jboss-logging-3.5.0.F
+ inal.jar libs/hibernate-commons-annotations-6.0.6.Final.jar libs/jandex
+ -3.0.5.jar libs/classmate-1.5.1.jar libs/byte-buddy-1.12.18.jar libs/ja
+ xb-runtime-4.0.2.jar libs/jaxb-core-4.0.2.jar libs/jakarta.xml.bind-api
+ -4.0.0.jar libs/antlr4-runtime-4.10.1.jar libs/netty-resolver-4.1.94.Fi
+ nal.jar libs/netty-common-4.1.94.Final.jar libs/flexmark-ext-emoji-0.64
+ .8.jar libs/flexmark-jira-converter-0.64.8.jar libs/flexmark-ext-gfm-st
+ rikethrough-0.64.8.jar libs/flexmark-ext-tables-0.64.8.jar libs/flexmar
+ k-ext-wikilink-0.64.8.jar libs/flexmark-ext-ins-0.64.8.jar libs/flexmar
+ k-ext-superscript-0.64.8.jar libs/flexmark-util-0.64.8.jar libs/flexmar
+ k-0.64.8.jar libs/angus-activation-2.0.0.jar libs/jakarta.activation-ap
+ i-2.1.1.jar libs/flexmark-util-format-0.64.8.jar libs/flexmark-util-ast
+ -0.64.8.jar libs/flexmark-util-builder-0.64.8.jar libs/flexmark-util-de
+ pendency-0.64.8.jar libs/flexmark-util-html-0.64.8.jar libs/flexmark-ut
+ il-options-0.64.8.jar libs/flexmark-util-sequence-0.64.8.jar libs/flexm
+ ark-util-collection-0.64.8.jar libs/flexmark-util-data-0.64.8.jar libs/
+ flexmark-util-misc-0.64.8.jar libs/flexmark-util-visitor-0.64.8.jar lib
+ s/txw2-4.0.2.jar libs/istack-commons-runtime-4.1.1.jar
+Main-Class: com.league.alertservice.Application
+
