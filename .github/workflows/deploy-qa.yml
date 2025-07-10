@@ -15,7 +15,7 @@ jobs:
       HOST: ${{ secrets.EC2_ALERT_QA_IP }}
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up SSH key
@@ -28,16 +28,21 @@ jobs:
       - name: Deploy to EC2 QA
         run: |
           ssh -o StrictHostKeyChecking=no ec2-user@$HOST << 'EOF'
+            echo "✅ Starting deployment"
             sudo dnf update -y
+            echo "✅ System updated"
             sudo dnf install -y git docker
+            echo "✅ Git and Docker installed"
 
             sudo systemctl enable --now docker
             sudo usermod -aG docker ec2-user
+            echo "✅ Docker service started"
 
             mkdir -p ~/.docker/cli-plugins
-            curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64               -o ~/.docker/cli-plugins/docker-compose
+            curl -SL https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
             chmod +x ~/.docker/cli-plugins/docker-compose
             sudo ln -sf ~/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
+            echo "✅ Docker Compose installed"
 
             cd /home/ec2-user
 
@@ -50,8 +55,16 @@ jobs:
             git config --global --add safe.directory /home/ec2-user/alert-service
             git reset --hard
             git pull origin qa
+            echo "✅ Code updated"
 
-            ./gradlew build
+            export JAVA_HOME=/usr/lib/jvm/java-17
+            export PATH=$JAVA_HOME/bin:$PATH
+            echo "✅ JAVA_HOME set"
+
+            ./gradlew build --no-daemon
+            echo "✅ Gradle build completed"
+
             docker compose down || true
             docker compose up -d --build
+            echo "✅ Docker containers started"
           EOF
